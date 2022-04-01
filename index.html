@@ -15,7 +15,6 @@
 
 		<!-- Perso ------>
 		<link href="css/style_perso.css" rel="stylesheet">
-		<link href="css/style_perso_responsive.css" rel="stylesheet">
 		<!-- Font Awesome -->
 		<link href="fontawesome/css/all.css" rel="stylesheet">
 
@@ -24,16 +23,22 @@
 
 		<!-- Nav & Image header -->
 		<header>
+		
 			<nav class="nav justify-content-center">
-				<ul>
-					<li><a href="#apropos">A PROPOS</a></li>
-					<li><a class="nav_hidden" href="">.</a></li>
-					<li><a href="#nosbieres"> NOS BIERES</a></li>
-					<li ><a href="" class="nav_hidden"> <img class="logo_nav nav_hidden logo_nav_responsive" src="images/logo.png" alt="logo de la beauf"> </a></li>
-					<li><a href="#gallerie">GALLERIE</a></li>
-					<li><a class="nav_hidden" href="">.</a></li>
-					<li><a href="#contact">CONTACT</a></li>
+				<div class="responsive-logo"></div>
+				<ul class="nav_responsive list-nav">
+					<li class="item-nav"><a href="#apropos">A PROPOS</a></li>
+					<li class="nav-hidden"><a class="nav_hidden nav_responsive" href="">.</a></li>
+					<li class="item-nav"><a href="#nosbieres"> NOS BIERES</a></li>
+					<li class="nav-hidden" ><a href="" class="nav_hidden nav_responsive"> <img class="logo_nav nav_hidden logo_nav_responsive" src="images/logo.png" alt="logo de la beauf"> </a></li>
+					<li class="item-nav"><a href="#gallerie">GALLERIE</a></li>
+					<li class="nav-hidden"><a class="nav_hidden nav_responsive" href="">.</a></li>
+					<li class="item-nav"><a href="#contact">CONTACT</a></li>
 				</ul>
+				<div class="btn-toggle-container" role="button">
+					<img class="menu_hidden" src="../images/menu-icon.svg" alt="icone menu nav">
+				</div>
+
 			</nav>
 			<div class="img_header"></div>
 		</header>
@@ -134,7 +139,7 @@
 					<div class="col-md-10 mx-auto pt-5">
 							<iframe class="border border-secondary rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3901445677707!2d3.4567961513350642!3d43.660855179018625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b15d2cc40e4b2d%3A0x9f71d5d508ad422f!2sBrasserie%20La%20Beauf!5e0!3m2!1sfr!2sfr!4v1648658967732!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							
-							<div class="d-flex align-items-center pt-3 pl-0">
+							<div class="d-flex align-items-left pt-3 pl-0">
 								<div class="t pl-0 col-3 p-2 localisation d-flex align-items-center justify-content-center">
 									<span class="fa-solid fa-location-dot fa-xl text-white"></span>
 								</div>
@@ -168,5 +173,9 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="js/app.js"></script>
+
 	</body>
+
 </html>

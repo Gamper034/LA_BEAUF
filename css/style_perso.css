@@ -64,6 +64,10 @@ nav ul li a{
     /* overflow: hidden; */
 }
 
+.logo_responsive{
+    display: hidden;
+}
+
 .img_header{
     background: url(../images/IMG_1528.jpg) no-repeat top center #f4f5fc;
     -webkit-background-size: cover;
@@ -247,4 +251,77 @@ div.localisation{
   }
 
 
+  .btn-toggle-container{
+    position: absolute;
+    top: 30px;
+    right: 15px;  
+    cursor: pointer;
+    display: none;
+  
+  }
+  
+  
+  .btn-toggle-container img {
+    width: 40px;
+  
+  }
+  
+  .menu_hidden{
+    display: hidden;
+  }
 
+
+
+  @media screen and (max-width: 884px){
+    img.logo_nav_responsive{
+      display: hidden;
+ 
+    }
+ 
+ 
+    .responsive-logo { 
+      background: url(../images/logo_2.png) no-repeat center center; 
+      height: 85px;
+      max-height: 85px;
+      min-height: 85px;
+      width: 87px;
+      min-width: 87px;
+      max-width: 87px;
+      position: absolute; 
+      top: 0.8%; 
+      left: 3%; 
+   }
+ 
+   .btn-toggle-container{
+     display: block;
+   }
+ 
+ 
+ 
+   nav {
+       border-bottom: 1px solid ;
+     }
+ 
+     .list-nav{
+       position: relative;
+       top: 70px;
+       display: none;
+     }
+ 
+     .item-nav{
+       display: block;
+       background: #F1F1F1;
+       margin: 0;
+     }
+ 
+     .list-nav.active-menu{
+       display: block;
+    }
+ 
+    .nav-hidden{
+     display: none;
+   }
+ 
+   }
+ 
+ 
