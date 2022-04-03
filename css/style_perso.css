@@ -270,12 +270,27 @@ div.localisation{
     display: hidden;
   }
 
+  /* .icon-nav{
+      background: url(/images/menu-icon.svg) no-repeat center;
+  } */
+
 
 
   @media screen and (max-width: 884px){
+    
+    html,body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
     img.logo_nav_responsive{
       display: hidden;
  
+    }
+
+    .inverse {
+        display: flex;
+        flex-direction: column-reverse;
     }
  
  
@@ -295,33 +310,30 @@ div.localisation{
    .btn-toggle-container{
      display: block;
    }
- 
- 
- 
-   nav {
-       border-bottom: 1px solid ;
-     }
- 
-     .list-nav{
+
+    #list-nav{
        position: relative;
-       top: 70px;
+       /* top: 60px; */
        display: none;
-     }
+       width: 100%;
+    }
  
-     .item-nav{
+    .item-nav{
        display: block;
        background: #F1F1F1;
        margin: 0;
-     }
- 
-     .list-nav.active-menu{
-       display: block;
     }
+
  
     .nav-hidden{
      display: none;
    }
- 
+
+   .row_beer_padding{
+       padding-bottom: 2px;
    }
+
+   /* .position_responsive */
+}
  
  

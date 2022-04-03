@@ -22,23 +22,24 @@
 	<body>
 
 		<!-- Nav & Image header -->
-		<header>
-		
+		<header>		
 			<nav class="nav justify-content-center">
+				
 				<div class="responsive-logo"></div>
-				<ul class="nav_responsive list-nav">
-					<li class="item-nav"><a href="#apropos">A PROPOS</a></li>
-					<li class="nav-hidden"><a class="nav_hidden nav_responsive" href="">.</a></li>
-					<li class="item-nav"><a href="#nosbieres"> NOS BIERES</a></li>
-					<li class="nav-hidden" ><a href="" class="nav_hidden nav_responsive"> <img class="logo_nav nav_hidden logo_nav_responsive" src="images/logo.png" alt="logo de la beauf"> </a></li>
-					<li class="item-nav"><a href="#gallerie">GALLERIE</a></li>
-					<li class="nav-hidden"><a class="nav_hidden nav_responsive" href="">.</a></li>
-					<li class="item-nav"><a href="#contact">CONTACT</a></li>
-				</ul>
-				<div class="btn-toggle-container" role="button">
-					<img class="menu_hidden" src="../images/menu-icon.svg" alt="icone menu nav">
-				</div>
+					<ul id="list-nav">
+						<li class="item-nav"><a href="#apropos">A PROPOS</a></li>
+						<li class="nav-hidden"><a class="nav_hidden nav_responsive" href="">.</a></li>
+						<li class="item-nav"><a href="#nosbieres"> NOS BIERES</a></li>
+						<li class="nav-hidden" ><a href="" class="nav_hidden nav_responsive"> <img class="logo_nav nav_hidden logo_nav_responsive" src="images/logo.png" alt="logo de la beauf"> </a></li>
+						<li class="item-nav"><a href="#gallerie">GALLERIE</a></li>
+						<li class="nav-hidden"><a class="nav_hidden nav_responsive" href="">.</a></li>
+						<li class="item-nav"><a href="#contact">CONTACT</a></li>
+					</ul>
 
+				<div class="btn-toggle-container" role="button" onclick="navbar()">
+					<img class="" src="images/menu-icon.svg" alt="icone menu nav">
+				</div>
+				
 			</nav>
 			<div class="img_header"></div>
 		</header>
@@ -63,7 +64,7 @@
 				<div class="col-md-8 img_1 nopadding" id="nosbieres"> 
 					<!-- <img class="img_1" src="/images/IMG_1463_resize.jpg" alt="Image bière blonde">   -->
 				</div>
-				<div class="col-md-4 nopadding">
+				<div class="col-md-4 nopadding ">
 					<h3 class="beers">La Blonde</h3>
 					<p class="beers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, facere consectetur? Expedita est facere, esse possimus, soluta molestiae voluptates tempore eveniet vero, nisi doloribus placeat!</p>
 					<div class="thin-sep-blonde"></div>
@@ -73,8 +74,8 @@
 
 		<div class="container-fluid">
 
-			<div class="row beer_font">
-				<div class="col-md-4 nopadding">
+			<div class="row beer_font inverse">
+				<div class="col-md-4 nopadding ">
 					<h3 class="beers">La Rouquine</h3>
 					<p class="beers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, facere consectetur? Expedita est facere, esse possimus, soluta molestiae voluptates tempore eveniet vero, nisi doloribus placeat! Accusantium explicabo perferendis,</p>
 					<div class="thin-sep-rouquine"></div>
@@ -91,7 +92,7 @@
 				<div class="col-md-4 nopadding">
 					<div class="img_3"></div>
 				</div>
-				<div class="col-md-4 nopadding">
+				<div class="col-md-4 nopadding ">
 						<h3 class="beers">La Calie</h3>
 						<p class="beers">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam doloremque iste impedit! Non autem impedit debitis assumenda ex vero sunt dignissimos veniam fugiat laboriosam, dolore asperiores inventore atque eaque maiores iste dolorum. Architecto, vitae pariatur consequatur repellendus exercitationem. </p>
 						<div class="thin-sep-cerise"></div>
@@ -128,15 +129,16 @@
 								<small id="help" class="form-text text-muted">* Champs obligatoires</small>
 							</div>
 							<div class="pt-3 text-right">
-							<button type="button" class="btn btn-secondary ">Envoyer</button>
+							<button type="button" class="btn btn-secondary " id="form-submit">Envoyer</button>
+							<!-- <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div> -->
 							</div>
 
 						</form>
 					</div>
 				</div>
 
-				<div class="col-6">
-					<div class="col-md-10 mx-auto pt-5">
+				<div class="col-md-6">
+					<div class=" col-10 mx-auto pt-5">
 							<iframe class="border border-secondary rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3901445677707!2d3.4567961513350642!3d43.660855179018625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b15d2cc40e4b2d%3A0x9f71d5d508ad422f!2sBrasserie%20La%20Beauf!5e0!3m2!1sfr!2sfr!4v1648658967732!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							
 							<div class="d-flex align-items-left pt-3 pl-0">
@@ -174,8 +176,11 @@
 			</div>
 		</footer>
 
-		<script src="js/app.js"></script>
 
 	</body>
+
+	<script  type="text/javascript" src="js/app.js"></script>
+	<script  type="text/javascript" src="js/jquery-3.6.0.js"></script>
+	<script  type="text/javascript" src="js/form-script.js"></script>
 
 </html>
