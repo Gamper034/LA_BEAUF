@@ -4,7 +4,7 @@ $email = $_POST["email"];
 $phone = $_POST["phone"];
 $message = $_POST["message"];
 
-dump($_POST);
+var_dump($_POST);
  
 $EmailTo = "ad-dev@outlook.fr";
 $Subject = "Test";
