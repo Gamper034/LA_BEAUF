@@ -333,6 +333,10 @@ div.localisation{
        padding-bottom: 2px;
    }
 
+   .google_responsive{
+       display: none;
+   }
+
    /* .position_responsive */
 }
  
