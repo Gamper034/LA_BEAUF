@@ -6,6 +6,8 @@
     require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
     require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
 
+    $body_msg = "<p>Test</p>";
+
     $mail = new PHPMailer();
     $mail->IsSMTP();
     $mail->Host = 'smtp.office365.com';               //Adresse IP ou DNS du serveur SMTP
@@ -25,6 +27,7 @@
 
     $mail->Subject = 'Mon sujet';                      //Le sujet du mail
     $mail->WordWrap = 50; 			                   //Nombre de caracteres pour le retour a la ligne automatique
+    $mail->Body = $body_msg;
     $mail->AltBody = 'Mon message en texte brut'; 	       //Texte brut
     $mail->IsHTML(false);                                  //Préciser qu'il faut utiliser le texte brut
 
