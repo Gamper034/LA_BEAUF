@@ -16,7 +16,7 @@
 
 
 
-    function send_mail(){
+
 
         $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
         <p><b>Nom : </b>' . $_POST['name'] . '<br>
@@ -62,5 +62,4 @@
             echo 'Erreur lors de l\'envoi du message.'; 
 
         }
-    }
 ?>
