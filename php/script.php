@@ -1,44 +1,58 @@
 <?php
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\SMTP;
+
     
+    //Load Composer's autoloader
     require '../vendor/autoload.php';
 
+    $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
+    <p><b>Nom : </b>' . $_POST['name'] . '<br>
+    <p><b>Téléphone : </b>' . $_POST['phone'] . '<br>
+    <p><b>Email : </b>' . $_POST['email'] . '<br> <br>
+    <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
 
-    $body_msg = "<p>Test</p>";
+    // dump($_POST);
+
+
+    // $body_msg = "<p>Test</p>";
 
     $mail = new PHPMailer();
-    $mail->IsSMTP();
-    $mail->Host = 'smtp.office365.com';               //Adresse IP ou DNS du serveur SMTP
-    $mail->Port = 587;                          //Port TCP du serveur SMTP
-    $mail->SMTPAuth = 1;                        //Utiliser l'identification
 
-    if($mail->SMTPAuth){
-        $mail->SMTPSecure = 'STARTTLS';               //Protocole de sécurisation des échanges avec le SMTP
-        $mail->Username =  'ad-dev@outlook.fr';   //Adresse email à utiliser
-        $mail->Password =  'Princeps0608';         //Mot de passe de l'adresse email à utiliser
+    try{
+            //Server settings
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host = 'smtp.office365.com';               //Adresse IP ou DNS du serveur SMTP
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Username   = 'ad-dev@outlook.fr';                     //SMTP username
+        $mail->Password   = 'Princeps0608';                               //SMTP password
+        // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+        $mail->SMTPSecure = 'STARTTLS';            //Enable implicit TLS encryption
+        // $mail->SMTPSecure= 'STARTTLS';               //Protocole de sécurisation des échanges avec le SMTP
+        $mail->Port = 587;   
+
+            //Recipients
+        $mail->setFrom('ad-dev@outlook.fr', 'Dev');
+        $mail->addAddress('anthony.diaz@esicad.org', 'Antho');     //Add a recipient
+
+
+            //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'Entry '.rand();
+        $mail->WordWrap = 50; 			                   //Nombre de caracteres pour le retour a la ligne automatique
+        $mail->Body    = $message;
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        $mail->CharSet = 'UTF-8'; //Format d'encodage à utiliser pour les caractères
+
+        $mail->send();
+
+        echo 'Le message a été envoyé.'; 
+
+    } catch (Exception $e){
+
+        echo 'Erreur lors de l\'envoi du message.'; 
+
     }
-
-    $mail->CharSet = 'UTF-8'; //Format d'encodage à utiliser pour les caractères
-    $mail->smtpConnect();
-
-    $mail->From = 'ad-dev@outlook.fr';                //L'email à afficher pour l'envoi
-
-    $mail->Subject = 'Mon sujet';                      //Le sujet du mail
-    $mail->WordWrap = 50; 			                   //Nombre de caracteres pour le retour a la ligne automatique
-    $mail->Body = $body_msg;
-    $mail->AltBody = 'Mon message en texte brut'; 	       //Texte brut
-    $mail->IsHTML(false);                                  //Préciser qu'il faut utiliser le texte brut
-
-    $mail->AddAddress('anthony.diaz@esicad.org');
-
-    $mail->send();
-
-
-    if (!$mail->send()) {
-        echo $mail->ErrorInfo;
-    } else{
-        echo 'Message bien envoyé';
-    }
-
 ?>
