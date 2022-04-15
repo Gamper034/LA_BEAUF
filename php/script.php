@@ -8,7 +8,7 @@
     require '../vendor/autoload.php';
 
 
-        if (isset($_POST['submit'])) {
+        // if (isset($_POST['submit'])) {
 
             $mail = new PHPMailer();
 
@@ -53,5 +53,5 @@
                 echo 'Erreur lors de l\'envoi du message.'; 
 
             }
-        }
+        // }
 ?>
