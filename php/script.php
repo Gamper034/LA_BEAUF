@@ -38,7 +38,7 @@
 
                     //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
-                $mail->Subject = "Contact du site".$_POST['name'];
+                $mail->Subject = "Demande de la part de:".$_POST['name'];
                 $mail->WordWrap = 50; 			                   //Nombre de caracteres pour le retour a la ligne automatique
                 $mail->Body    = $message;
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
