@@ -108,7 +108,7 @@
 			<div class="row pb-6">
 				<div class="col-md-6">
 					<div class="col-10 mx-auto">
-						<form method="POST" action="php/script.php">
+						<form method="post" action="php/script.php">
 							<div class="m-2">
 								<label for="name" class="">Nom*</label>
 								<input name="name" type="text" class="form-control" id="nom" placeholder="Entrez votre nom" required>
@@ -137,7 +137,7 @@
 
 				<div class="col-md-6">
 					<div class=" col-10 mx-auto pt-5 google_responsive">
-							<iframe class="border border-secondary rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3901445677707!2d3.4567961513350642!3d43.660855179018625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b15d2cc40e4b2d%3A0x9f71d5d508ad422f!2sBrasserie%20La%20Beauf!5e0!3m2!1sfr!2sfr!4v1648658967732!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<!-- <iframe class="border border-secondary rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3901445677707!2d3.4567961513350642!3d43.660855179018625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b15d2cc40e4b2d%3A0x9f71d5d508ad422f!2sBrasserie%20La%20Beauf!5e0!3m2!1sfr!2sfr!4v1648658967732!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 							
 							<div class="d-flex align-items-left pt-3 pl-0">
 								<div class="t pl-0 col-3 p-2 localisation d-flex align-items-center justify-content-center">
@@ -182,3 +182,14 @@
 </html>
 
 
+<!-- <script>
+	function post_form(){
+
+		$.ajax({
+		type: 'POST',          //La méthode cible (POST ou GET)
+		url : 'Controller.php' //Script Cible
+		data:
+		});
+
+	}
+</script> -->

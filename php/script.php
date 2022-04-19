@@ -1,42 +1,34 @@
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
-    use PHPMailer\PHPMailer\SMTP;
 
-    //Pour pouvoir afficher les sauts de lignes ignorés, il faut les transformer en balises html <br> avec la fonction nl2br().
-    //Load Composer's autoloader
-    require '../vendor/autoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+require '../vendor/autoload.php';
 
 
-        // if (isset($_POST['submit'])) {
+// if(isset($_REQUEST['action']) && $_REQUEST['action'] === "send_form"){
+
 
             $mail = new PHPMailer();
 
-            $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
+            $message = '<h1>Message envoyé depuis la page Contact</h1>
             <p><b>Nom : </b>' . $_POST['name'] . '<br>
             <p><b>Téléphone : </b>' . $_POST['phone'] . '<br>
             <p><b>Email : </b>' . $_POST['email'] . '<br> <br>
             <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
 
             try{
-                    //Server settings
-                // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                 $mail->isSMTP();                                            //Send using SMTP
                 $mail->Host = 'smtp.office365.com';               //Adresse IP ou DNS du serveur SMTP
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
                 $mail->Username   = 'ad-dev@outlook.fr';                     //SMTP username
                 $mail->Password   = 'Princeps0608';                               //SMTP password
-                // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                 $mail->SMTPSecure = 'STARTTLS';            //Enable implicit TLS encryption
-                // $mail->SMTPSecure= 'STARTTLS';               //Protocole de sécurisation des échanges avec le SMTP
                 $mail->Port = 587;   
 
-                    //Recipients
                 $mail->setFrom('ad-dev@outlook.fr', 'Dev');
                 $mail->addAddress('anthony.diaz@esicad.org', 'Antho');     //Add a recipient
 
-
-                    //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
                 $mail->Subject = "Demande de la part de:".$_POST['name'];
                 $mail->WordWrap = 50; 			                   //Nombre de caracteres pour le retour a la ligne automatique
@@ -53,5 +45,5 @@
                 echo 'Erreur lors de l\'envoi du message.'; 
 
             }
-        // }
+// }
 ?>
