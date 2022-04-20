@@ -1,2 +1,5 @@
 <?php
-echo "Hello";
+
+require '../vendor/autoload.php';
+
+dump($_POST);
