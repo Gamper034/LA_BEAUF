@@ -13,3 +13,4 @@ function navbar() {
       x.style.display = "block";
     }
 }
+

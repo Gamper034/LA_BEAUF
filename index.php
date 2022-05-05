@@ -15,6 +15,7 @@
 
 		<!-- Perso  -->
 		<link href="css/style_perso.css" rel="stylesheet">
+		
 		 <!-- Font Awesome -->
 		<link href="fontawesome/css/all.css" rel="stylesheet">
 	</head>
@@ -48,7 +49,13 @@
 				<div class="row">
 					<div class="col">
 						<h2 class="paragraphe">Qui sommes nous ?</h2>
-						<p class="text-intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						<p class="text-intro">Nous sommes deux beaux-frères qui avons créé leur brasserie artisanale par passion en 2020. Nos breuvages sont préparés dans le Sud de la France à partir de saveurs naturelles et de produits français, ce qui reflète l'authenticité d'un vrai Beauf*.Mais rassure-toi, La Beauf n'est pas "bof" et on y prend goût ! Nous t'informons qu'en buvant cette bière, tu rejoins le cercle privé des Beaufs Français...A la tienne !
+							<small id="" class="form-text text-muted">
+							* Beauf :
+							Beau-frère ou Homme peu cultivé et fier de l'être, adepte des claquettes chaussettes et grand amateur de pétanque. <br>
+							Le Beauf n'est jamais le dernier pour la troisième mi-temps.
+							</small>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -64,7 +71,7 @@
 				</div>
 				<div class="col-md-4 nopadding ">
 					<h3 class="beers">La Blonde</h3>
-					<p class="beers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, facere consectetur? Expedita est facere, esse possimus, soluta molestiae voluptates tempore eveniet vero, nisi doloribus placeat!</p>
+					<p class="beers">Bière blonde authentique avec son houblon floral et sa pointe d'amertume pour une bière bien rafraichissante et désaltérante. C'est tout ce qu'on demande à une bière blonde n'est-ce pas ?</p>
 					<div class="thin-sep-blonde"></div>
 				</div>
 			</div>
@@ -75,7 +82,7 @@
 			<div class="row beer_font inverse">
 				<div class="col-md-4 nopadding ">
 					<h3 class="beers">La Rouquine</h3>
-					<p class="beers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, facere consectetur? Expedita est facere, esse possimus, soluta molestiae voluptates tempore eveniet vero, nisi doloribus placeat! Accusantium explicabo perferendis,</p>
+					<p class="beers">Une bière ambrée aux reflets roux, le malt utilisé va amener des notes biscuitées et caramel. Sa légère touche acidulée fera travailler vos papilles en profondeur.</p>
 					<div class="thin-sep-rouquine"></div>
 				</div>
 				<div class="col-md-8 img_2 "> 
@@ -92,7 +99,7 @@
 				</div>
 				<div class="col-md-4 nopadding ">
 						<h3 class="beers">La Calie</h3>
-						<p class="beers">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam doloremque iste impedit! Non autem impedit debitis assumenda ex vero sunt dignissimos veniam fugiat laboriosam, dolore asperiores inventore atque eaque maiores iste dolorum. Architecto, vitae pariatur consequatur repellendus exercitationem. </p>
+						<p class="beers">Sur la base d'une bière blonde plutôt aromatique, nous ajoutons des framboises entières directement dans notre cuve de fermentation. Le résultat ? Une bière légère, naturellement fruitée et tout simplement irrésistible... </p>
 						<div class="thin-sep-cerise"></div>
 
 				</div>
@@ -108,10 +115,10 @@
 			<div class="row pb-6">
 				<div class="col-md-6">
 					<div class="col-10 mx-auto">
-						<form method="post" action="php/script.php">
+						<form method="post" id="form">
 							<div class="m-2">
-								<label for="name" class="">Nom*</label>
-								<input name="name" type="text" class="form-control" id="nom" placeholder="Entrez votre nom" required>
+								<label for="nom" class="">Nom*</label>
+								<input name="nom" type="text" class="form-control" id="nom" placeholder="Entrez votre nom" required>
 							</div>
 							<div class="m-2">
 								<label for="email" class="">Email*</label>
@@ -127,7 +134,7 @@
 								<small id="help" class="form-text text-muted">* Champs obligatoires</small>
 							</div>
 							<div class="pt-3 text-right">
-							<button name="submit" type="submit" value="submit" class="btn btn-secondary" >Envoyer</button>
+							<button name="submit" type="submit" value="submit" class="btn btn-secondary" onclick="send_form()">Envoyer</button>
 							<!-- <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div> -->
 							</div>
 
@@ -180,15 +187,25 @@
 
 </html>
 
+<script>
 
-<!-- <script>
-	function post_form(){
+	function send_form(){
 
 		$.ajax({
-		type: 'POST',          //La méthode cible (POST ou GET)
-		url : 'Controller.php' //Script Cible
-		data:
+			type: 'POST',          //La méthode cible (POST ou GET)
+			url : 'php/script.php',
+			dataType: 'text', //Script Cible
+			data: {
+				nom: $('input#nom').val(),
+				email: $('input#email').val(),
+				phone: $('input#phone').val(),
+				message: $('textarea#message').val()
+			},
+			success: function(data){
+				// console.log('Envoyé');
+				toastr.success('Demande envoyée avec succès.');
+			}
 		});
-
 	}
-</script> -->
+	
+</script>

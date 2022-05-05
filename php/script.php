@@ -8,11 +8,11 @@ require '../vendor/autoload.php';
 
 // if(isset($_REQUEST['action']) && $_REQUEST['action'] === "send_form"){
 
-
+var_dump($_POST);
             $mail = new PHPMailer();
 
             $message = '<h1>Message envoyé depuis la page Contact</h1>
-            <p><b>Nom : </b>' . $_POST['name'] . '<br>
+            <p><b>Nom : </b>' . $_POST['nom'] . '<br>
             <p><b>Téléphone : </b>' . $_POST['phone'] . '<br>
             <p><b>Email : </b>' . $_POST['email'] . '<br> <br>
             <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
@@ -30,7 +30,7 @@ require '../vendor/autoload.php';
                 $mail->addAddress('anthony.diaz@esicad.org', 'Antho');     //Add a recipient
 
                 $mail->isHTML(true);                                  //Set email format to HTML
-                $mail->Subject = "Demande de la part de:".$_POST['name'];
+                $mail->Subject = "Demande de la part de: ".$_POST['nom'];
                 $mail->WordWrap = 50; 			                   //Nombre de caracteres pour le retour a la ligne automatique
                 $mail->Body    = $message;
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
