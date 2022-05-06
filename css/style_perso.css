@@ -106,6 +106,10 @@ text-align: center;
     margin: 15px 40px 0px 40px;
 }
 
+.legend{
+    font-size: 12px;
+}
+
 div.img_1{
     background: url(../images/IMG_1463_resize.jpg) no-repeat center center;
     background-size: cover;

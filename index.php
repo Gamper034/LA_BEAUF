@@ -49,11 +49,10 @@
 				<div class="row">
 					<div class="col">
 						<h2 class="paragraphe">Qui sommes nous ?</h2>
-						<p class="text-intro">Nous sommes deux beaux-frères qui avons créé leur brasserie artisanale par passion en 2020. Nos breuvages sont préparés dans le Sud de la France à partir de saveurs naturelles et de produits français, ce qui reflète l'authenticité d'un vrai Beauf*.Mais rassure-toi, La Beauf n'est pas "bof" et on y prend goût ! Nous t'informons qu'en buvant cette bière, tu rejoins le cercle privé des Beaufs Français...A la tienne !
-							<small id="" class="form-text text-muted">
+						<p class="text-intro">Nous sommes deux beaux-frères qui avons créé leur brasserie artisanale par passion en 2020. Nos breuvages sont préparés dans le Sud de la France à partir de saveurs naturelles et de produits français, ce qui reflète l'authenticité d'un vrai Beauf*.Mais rassure-toi, La Beauf n'est pas "bof" et on y prend goût ! Nous t'informons qu'en buvant cette bière, tu rejoins le cercle privé des Beaufs Français...A la tienne ! <br>
+							<small id="" class="legend">
 							* Beauf :
-							Beau-frère ou Homme peu cultivé et fier de l'être, adepte des claquettes chaussettes et grand amateur de pétanque. <br>
-							Le Beauf n'est jamais le dernier pour la troisième mi-temps.
+							Beau-frère ou Homme peu cultivé et fier de l'être, adepte des claquettes chaussettes et grand amateur de pétanque. Le Beauf n'est jamais le dernier pour la troisième mi-temps.
 							</small>
 						</p>
 					</div>
