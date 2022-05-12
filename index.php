@@ -12,6 +12,7 @@
 		<link href="css/bootstrap-reboot.min.css" rel="stylesheet">
 		<link href="css/bootstrap-grid.css" rel="stylesheet">
 		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
+		<link href="toastr/build/toastr.min.css" rel="stylesheet">
 
 		<!-- Perso  -->
 		<link href="css/style_perso.css" rel="stylesheet">
@@ -183,6 +184,7 @@
 	<script  type="text/javascript" src="js/app.js"></script>
 	<script  type="text/javascript" src="js/jquery-3.6.0.js"></script>
 	<script  type="text/javascript" src="js/form-script.js"></script>
+	<script  type="text/javascript" src="toastr/build/toastr.min.js"></script>
 
 </html>
 
@@ -202,9 +204,11 @@
 			},
 			success: function(data){
 				// console.log('Envoyé');
-				toastr.success('Demande envoyée avec succès.');
+				toastr.success('Demande envoyée avec succès');
 			}
 		});
 	}
+
+
 	
 </script>
