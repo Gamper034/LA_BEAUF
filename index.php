@@ -12,7 +12,7 @@
 		<link href="css/bootstrap-reboot.min.css" rel="stylesheet">
 		<link href="css/bootstrap-grid.css" rel="stylesheet">
 		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
-		<link href="toastr/build/toastr.min.css" rel="stylesheet">
+		<link href="toastr/build/toastr.css" rel="stylesheet">
 
 		<!-- Perso  -->
 		<link href="css/style_perso.css" rel="stylesheet">
@@ -134,7 +134,7 @@
 								<small id="help" class="form-text text-muted">* Champs obligatoires</small>
 							</div>
 							<div class="pt-3 text-right">
-							<button name="submit" type="submit" value="submit" class="btn btn-secondary" onclick="send_form()">Envoyer</button>
+							<button name="submit" type="submit" value="submit" id="send_button"  class="btn btn-secondary" onclick="send_form()">Envoyer</button>
 							<!-- <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div> -->
 							</div>
 
@@ -184,11 +184,35 @@
 	<script  type="text/javascript" src="js/app.js"></script>
 	<script  type="text/javascript" src="js/jquery-3.6.0.js"></script>
 	<script  type="text/javascript" src="js/form-script.js"></script>
-	<script  type="text/javascript" src="toastr/build/toastr.min.js"></script>
+	<script  type="text/javascript" src="toastr/toastr.js"></script>
 
 </html>
 
 <script>
+
+$('#send_button').on('click', function(){
+				
+				toastr.options = {
+					"closeButton": false,
+					"debug": false,
+					"newestOnTop": false,
+					"progressBar": false,
+					"positionClass": "toast-top-right",
+					"preventDuplicates": false,
+					"onclick": null,
+					"showDuration": "300",
+					"hideDuration": "1000",
+					"timeOut": "5000",
+					"extendedTimeOut": "1000",
+					"showEasing": "swing",
+					"hideEasing": "linear",
+					"showMethod": "fadeIn",
+					"hideMethod": "fadeOut"
+				}
+
+				toastr["success"]("Message envoyé avec succès")
+		
+			})
 
 	function send_form(){
 
@@ -204,10 +228,14 @@
 			},
 			success: function(data){
 				// console.log('Envoyé');
-				toastr.success('Demande envoyée avec succès');
+				// toastr.success('Demande envoyée avec succès');
+				toastr["success"]("Message envoyé avec succès");
 			}
 		});
 	}
+
+
+	
 
 
 	
