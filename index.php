@@ -149,7 +149,7 @@
 					</div>
 				</div>
 
-				<div class="">
+				<div class="col-md-6">
                     <div class=" img_contact rounded">
                         <div class="container d-flex justify-content-center h-100">
                             <div class="row align-self-center">
@@ -158,8 +158,8 @@
                                         <div class="maddox">la Beauf</div>
                                         <div class="Eversthedin">Brasserie Artisanale</div>
                                         <div class="Eversthedin mt-1">Tom Senegas - Quentin Salotti </div>
-                                        <div class="">
-                                            <span class="me-4"><i class="bi bi-geo-alt-fill me-2"></i>7 Rue de la Forge, 34725 Saint-Félix-de-Lodez</span>
+                                        <div class="justify-content-center contact-size"><i class="bi bi-geo-alt-fill me-1"></i>7 Rue de la Forge, 34725 Saint-Félix-de-Lodez
+                                            
                                         </div>
                                     </div>
                                     
