@@ -39,7 +39,7 @@
 						<li class="nav-item">
 							<a class="" href="#apropos">A PROPOS</a>
 						</li>
-						<a class="d-none d-md-block " href="#"><img class="logo_nav mx-4" src="images/logo.png" alt="logo de la beauf"></a>
+						<a class="d-none d-md-block pointer_none" href="#"><img class="logo_nav mx-4" src="images/logo.png" alt="logo de la beauf"></a>
 						<li class="nav-item">
 							<a class="me-2" href="#nosbieres">NOS BIERES</a>
 						</li>
@@ -61,7 +61,7 @@
 				<div class="row">
 					<div class="col">
 						<h2 class="paragraphe">Qui sommes nous ?</h2>
-						<p class="text-intro">Nous sommes deux beaux-frères qui avons créé leur brasserie artisanale par passion en 2020. Nos breuvages sont préparés dans le Sud de la France à partir de saveurs naturelles et de produits français, ce qui reflète l'authenticité d'un vrai Beauf*.Mais rassure-toi, La Beauf n'est pas "bof" et on y prend goût ! Nous t'informons qu'en buvant cette bière, tu rejoins le cercle privé des Beaufs Français...A la tienne ! <br>
+						<p class="text-intro">Nous sommes deux beaux-frères qui avons créé leur <strong>brasserie artisanale</strong> par passion en 2020. Nos breuvages sont préparés dans le Sud de la France à partir de saveurs naturelles et de produits français, ce qui reflète l'authenticité d'un vrai Beauf*.Mais rassure-toi, La Beauf n'est pas "bof" et on y prend goût ! Nous t'informons qu'en buvant cette bière, tu rejoins le cercle privé des <strong>Beaufs</strong> Français...A la tienne ! <br>
 							<small id="" class="legend">
 							* Beauf :
 							Beau-frère ou Homme peu cultivé et fier de l'être, adepte des claquettes chaussettes et grand amateur de pétanque. Le Beauf n'est jamais le dernier pour la troisième mi-temps.
@@ -158,15 +158,11 @@
                                         <div class="maddox">la Beauf</div>
                                         <div class="Eversthedin">Brasserie Artisanale</div>
                                         <div class="Eversthedin mt-1">Tom Senegas - Quentin Salotti </div>
-                                        <div class="justify-content-center contact-size"><i class="bi bi-geo-alt-fill me-1"></i>7 Rue de la Forge, 34725 Saint-Félix-de-Lodez
-                                            
+                                        <div class="justify-content-center contact-size"><i class="bi bi-geo-alt-fill me-1"></i>7 Rue de la Forge, 34725 Saint-Félix-de-Lodez  
                                         </div>
+										<div class="justify-content-start contact-size"><i class="bi bi-telephone-fill me-1"></i>06 66 87 60 29</div>
                                     </div>
-                                    
-                                
-                    
-                                    
-                                    <a href="https://www.instagram.com/brasserie_la_beauf/?hl=fr"><i class="bi bi-instagram text-white me-2 fa-lg"></i></a>
+                                    <a href="https://www.instagram.com/brasserie_la_beauf/?hl=fr" target="_blank"><i class="bi bi-instagram text-white me-2 fa-lg"></i></a>
                                     <a href="https://www.facebook.com/LaBeauf/" target="_blank"><i class="bi bi-facebook text-white me-2 fa-lg"></i></a>
                                 </div>
                             </div>
@@ -179,15 +175,12 @@
 
 		
 		<!-- Bas de page -->
-		<footer>
-			<div class="container">
-				<div class="text-center ">
-		
-					
-						
-					</div>
-				</div>
+		<footer class="text-center text-lg-start">
+  			<!-- Copyright -->
+			<div class="text-center text-white p-3">
+				© 2022 Copyright: Brasserie la Beauf
 			</div>
+			<!-- Copyright -->
 		</footer>
 		
 	</body>
