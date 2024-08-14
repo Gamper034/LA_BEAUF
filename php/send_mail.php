@@ -19,13 +19,13 @@ require '../vendor/autoload.php';
                 $mail->isSMTP();                                            //Send using SMTP
                 $mail->Host = 'smtp.office365.com';               //Adresse IP ou DNS du serveur SMTP
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'ad-test-dev@outlook.fr';                     //SMTP username
-                $mail->Password   = 'testdev34';                               //SMTP password
+                $mail->Username   = 'yourmail';                     //SMTP username
+                $mail->Password   = 'yourpassword';                               //SMTP password
                 $mail->SMTPSecure = 'STARTTLS';            //Enable implicit TLS encryption
                 $mail->Port = 587;   
 
-                $mail->setFrom('ad-test-dev@outlook.fr', 'Contact de mon portfolio');
-                $mail->addAddress('anthony.diaz@esicad.org', 'Envoi Reception');     //Add a recipient
+                $mail->setFrom('yourmail', 'Contact de mon portfolio');
+                $mail->addAddress('yourmail', 'Envoi Reception');     //Add a recipient
 
                 $mail->isHTML(true);                                  //Mail au format HTML
                 $mail->Subject = "Demande de la part de: ".$_POST['name'];
